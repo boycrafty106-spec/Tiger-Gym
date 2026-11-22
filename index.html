@@ -572,7 +572,6 @@ textarea,
 #home,
 #tour,
 #programs,
-#transformations,
 #pricing,
 #reviews,
 #faq,
@@ -2352,152 +2351,17 @@ body.modal-open {
   transform: scale(0.98);
 }
 
-/* 4. REAL PEOPLE REAL PROGRESS (#050505 High Emotional Impact) -------- */
-#transformations {
-  background-color: #050505 !important;
-  color: #FFFFFF;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-#transformations .h2 { color: #FFFFFF; }
-#transformations .section-sub { color: #A3A3A3; }
-#transformations .carousel-btn {
-  background: #111111;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-}
-#transformations .carousel-btn:hover {
-  background: #1C1C1C;
-  border-color: var(--gold-primary);
-  color: var(--gold-primary);
-}
-
-.transform-card {
-  flex: 0 0 80%;
-  min-width: 80%;
-  scroll-snap-align: start;
-  background: #15161A;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
-  transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, box-shadow var(--dur-fast) ease;
-}
-@media (min-width: 640px) {
-  .transform-card {
-    flex: 0 0 calc(50% - 0.75rem);
-    min-width: calc(50% - 0.75rem);
-  }
-}
-@media (min-width: 1024px) {
-  .transform-card {
-    flex: 0 0 calc(25% - 1.15rem);
-    min-width: calc(25% - 1.15rem);
-  }
-}
-.transform-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(212, 167, 58, 0.35);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
-}
-
-/* Card Upper Content */
-.transform-card-top {
-  padding: 1.25rem 1.25rem 1rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Single Dashed Placeholder Box (Mid-Big Calibrated) */
-.transform-placeholder-box {
-  width: 100%;
-  aspect-ratio: 1 / 1.05;
-  min-height: 230px;
-  max-height: 290px;
-  border: 1.5px dashed rgba(255, 255, 255, 0.26);
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.035) 0%, rgba(20, 21, 26, 0.6) 100%);
-  margin-bottom: 1.4rem;
-  transition: border-color var(--dur-fast) ease, background-color var(--dur-fast) ease;
-}
-.transform-card:hover .transform-placeholder-box {
-  border-color: rgba(212, 167, 58, 0.45);
-}
-.transform-placeholder-text {
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #9A9EAA;
-  letter-spacing: 0.015em;
-  padding: 0 1rem;
-}
-.transform-placeholder-box img,
-.transform-photo-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-
-/* Card Main Text */
-.transform-card-main {
-  display: flex;
-  flex-direction: column;
-}
-.transform-result-title {
-  color: var(--gold-primary);
-  font-size: 1.28rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  margin: 0 0 0.35rem 0;
-}
-.transform-result-sub {
-  color: #8E9098;
-  font-size: 0.88rem;
-  font-weight: 500;
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* Card Footer with Divider */
-.transform-card-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 1.1rem 1.25rem 1.25rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-}
-.transform-member-name {
-  color: #FFFFFF;
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-.transform-program-name {
-  color: #8E9098;
-  font-size: 0.86rem;
-  font-weight: 500;
-}
-
-/* 5. GYM FEATURES SECTION (Infinite Auto-Scrolling Marquee & 1:1 Video) ------------- */
+/* 5. FEATURES MEDIA SECTION (single GIF/media placeholder) ---------------- */
 /* ==========================================================================
-   FEATURES SECTION & MEDIA CONFIGURATION
-   Adjust layout dimensions, aspect ratios, and media fit from this single block.
+   FEATURES MEDIA CONFIGURATION
+   Adjust aspect ratio, size and fit from this single block.
+   For a portrait GIF use: --features-media-ratio: 9 / 16;
    ========================================================================== */
 :root {
   --features-h: clamp(440px, 58vh, 538px);
   --features-media-ratio: 1 / 1;
   --features-media-w: clamp(220px, 72vw, 320px);
   --features-media-fit: cover;
-  --features-fade: 56px;
-  --features-card-h: 84px;
 }
 
 .features-section {
@@ -2508,196 +2372,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-.features-header-row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-}
-
-.features-header-text .eyebrow {
-  display: block;
-  margin-bottom: 0.35rem;
-}
-
-.features-heading {
-  margin: 0;
-  font-size: clamp(1.65rem, 3.5vw, 2.35rem);
-  line-height: 1.15;
-  color: #FFFFFF;
-}
-
-/* Base / Mobile-First Layout: Marquee on top, centered video below */
-.features-layout-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-@media not all and (min-width: 1024px) and (hover: hover) and (pointer: fine) {
-  .features-section .wrap {
-    padding-inline: 0;
-  }
-  .features-header-row {
-    padding-inline: var(--wrap-padding, clamp(1.5rem, 5vw, 2.75rem));
-  }
-}
-
-/* Marquee Viewport & Track */
-.features-marquee-wrapper {
-  position: relative;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  contain: layout paint;
-  touch-action: pan-y;
-  padding-block: 6px;
-  cursor: grab;
-  user-select: none;
-  -webkit-user-select: none;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  order: 1;
-}
-.features-marquee-wrapper::-webkit-scrollbar {
-  display: none;
-}
-.features-marquee-wrapper.is-marquee-active {
-  overflow: hidden;
-}
-.features-marquee-wrapper.is-dragging {
-  cursor: grabbing;
-}
-.features-marquee-wrapper:focus-visible {
-  outline: 2px solid var(--gold-primary, #F0A83F);
-  outline-offset: 3px;
-  border-radius: 6px;
-}
-
-.features-track {
-  display: flex;
-  flex-direction: row;
-  width: max-content;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  will-change: transform;
-  align-items: stretch;
-}
-
-/* Directional Edge Fades (Mobile: Left & Right) */
-.features-edge-fade {
-  position: absolute;
-  pointer-events: none;
-  z-index: 3;
-}
-.features-edge-start {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: var(--features-fade, 56px);
-  background: linear-gradient(to right, #0A0B0C 0%, transparent 100%);
-}
-.features-edge-end {
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: var(--features-fade, 56px);
-  background: linear-gradient(to left, #0A0B0C 0%, transparent 100%);
-}
-
-/* Feature Card */
-.feature-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: clamp(200px, 64vw, 260px);
-  flex: 0 0 clamp(200px, 64vw, 260px);
-  min-height: 84px;
-  padding: 16px 18px;
-  background: #111315;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  margin-inline-end: 12px;
-  margin-block-end: 0;
-  box-sizing: border-box;
-  user-select: none;
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
-  transition: border-color 0.2s ease;
-}
-
-/* Corner Bracket Ticks (Top-Left & Bottom-Right) */
-.feature-card::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  width: 12px;
-  height: 12px;
-  border-top: 1.5px solid rgba(217, 162, 58, 0.7);
-  border-left: 1.5px solid rgba(217, 162, 58, 0.7);
-  border-top-left-radius: 10px;
-  pointer-events: none;
-}
-.feature-card::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  right: -1px;
-  width: 12px;
-  height: 12px;
-  border-bottom: 1.5px solid rgba(217, 162, 58, 0.7);
-  border-right: 1.5px solid rgba(217, 162, 58, 0.7);
-  border-bottom-right-radius: 10px;
-  pointer-events: none;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .feature-card:hover {
-    border-color: rgba(217, 162, 58, 0.4);
-  }
-}
-
-/* 40x40 Rounded-Square Icon Tile */
-.feature-icon-tile {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
-  border-radius: 8px;
-  border: 1px solid rgba(217, 162, 58, 0.35);
-  background: rgba(217, 162, 58, 0.06);
-  color: var(--gold-primary, #F0A83F);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.feature-icon-tile svg {
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-
-/* Feature Title */
-.feature-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  line-height: 1.35;
-  margin: 0;
-  min-width: 0;
-  flex: 1;
-  text-align: left;
-  text-wrap: balance;
-  overflow-wrap: break-word;
-}
-
-/* 1:1 Video Media Frame */
+/* Media Frame (reserves space via aspect-ratio: no layout shift when GIF loads) */
 .features-media {
   position: relative;
   width: var(--features-media-w, clamp(220px, 72vw, 320px));
@@ -2705,10 +2380,8 @@ body.modal-open {
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: #0F1113;
-  margin: clamp(20px, 5vw, 32px) auto 0;
+  margin: 0 auto;
   box-sizing: border-box;
-  order: 2;
-  flex-shrink: 0;
 }
 .features-media::before {
   content: "";
@@ -2743,183 +2416,18 @@ body.modal-open {
   overflow: hidden;
   position: relative;
 }
-.features-media-video {
+.features-media-img {
   width: 100%;
   height: 100%;
   object-fit: var(--features-media-fit, cover);
   display: block;
 }
 
-/* Desktop Controls */
-.features-controls {
-  display: none;
-}
-
-/* ==========================================================================
-   DESKTOP MODE: Video Left + Vertical Marquee Right + Navigation Controls
-   ========================================================================== */
 @media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
-  .features-header-row {
-    padding-inline: 0;
-  }
-
-  .features-layout-grid {
-    display: grid;
-    grid-template-columns: auto minmax(0, 480px) 44px;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(24px, 3.5vw, 48px) 24px;
-    max-width: 1120px;
-    margin-inline: auto;
-  }
-
   .features-media {
-    order: 0;
-    margin: 0;
     height: var(--features-h);
     width: auto;
-    aspect-ratio: var(--features-media-ratio, 1 / 1);
     max-height: 538px;
-  }
-
-  .features-marquee-wrapper {
-    order: 1;
-    height: var(--features-h);
-    max-height: 538px;
-    width: 100%;
-    max-width: 480px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    touch-action: none;
-    padding-block: 0;
-  }
-
-  .features-track {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .feature-card {
-    width: 100%;
-    max-width: 480px;
-    flex: 0 0 var(--features-card-h, 84px);
-    height: var(--features-card-h, 84px);
-    min-height: var(--features-card-h, 84px);
-    margin-inline-end: 0;
-    margin-block-end: 12px;
-  }
-
-  /* Desktop Vertical Edge Fades (Top & Bottom) */
-  .features-edge-start {
-    top: 0;
-    bottom: auto;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: var(--features-fade, 56px);
-    background: linear-gradient(to bottom, #0A0B0C 0%, transparent 100%);
-  }
-  .features-edge-end {
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: var(--features-fade, 56px);
-    background: linear-gradient(to top, #0A0B0C 0%, transparent 100%);
-  }
-
-  /* Controls Column */
-  .features-controls {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .features-ctrl-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: #111315;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: border-color 0.2s ease, transform 0.1s ease;
-  }
-  .features-ctrl-btn:hover {
-    border-color: rgba(217, 162, 58, 0.8);
-    color: #FFFFFF;
-  }
-  .features-ctrl-btn:active {
-    transform: scale(0.96);
-  }
-  .features-ctrl-btn:focus-visible {
-    outline: 2px solid var(--gold-primary, #F0A83F);
-    outline-offset: 3px;
-  }
-  .features-ctrl-btn svg {
-    width: 20px;
-    height: 20px;
-    display: block;
-  }
-}
-
-/* Reduced Motion Fallback */
-@media (prefers-reduced-motion: reduce) {
-  .features-media-video {
-    display: none !important;
-  }
-  .features-marquee-wrapper {
-    overflow: auto !important;
-  }
-  .features-edge-fade {
-    display: none !important;
-  }
-  @media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
-    .features-marquee-wrapper {
-      overflow-y: auto !important;
-      scroll-snap-type: y mandatory !important;
-      scrollbar-width: thin;
-      scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
-    }
-    .features-marquee-wrapper::-webkit-scrollbar {
-      display: block;
-      width: 6px;
-    }
-    .features-marquee-wrapper::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 3px;
-    }
-    .features-track {
-      transform: none !important;
-      height: auto !important;
-    }
-    .feature-card {
-      scroll-snap-align: start !important;
-    }
-  }
-  @media not all and (min-width: 1024px) and (hover: hover) and (pointer: fine) {
-    .features-marquee-wrapper {
-      overflow-x: auto !important;
-      scroll-snap-type: x mandatory !important;
-    }
-    .features-track {
-      transform: none !important;
-      padding-inline: 1.5rem !important;
-    }
-    .feature-card {
-      scroll-snap-align: start !important;
-    }
   }
 }
 
@@ -4625,27 +4133,6 @@ html.js .reveal.is-visible {
 
 
 
-  /* 2.5 REAL TRANSFORMATIONS (Mid-Big Photo Placeholder Clearly Visible) */
-  .transform-card {
-    flex: 0 0 82%;
-    min-width: 82%;
-    border-radius: 18px;
-  }
-  .transform-card-top {
-    padding: 1.1rem 1.1rem 0.9rem 1.1rem;
-  }
-  .transform-placeholder-box {
-    aspect-ratio: 1 / 1.05;
-    min-height: 250px;
-    margin-bottom: 1.25rem;
-  }
-  .transform-placeholder-text {
-    font-size: 0.94rem;
-  }
-  .transform-card-footer {
-    padding: 1rem 1.1rem 1.15rem 1.1rem;
-  }
-
   /* 3. FAQ SECTION (Solves Screenshot 3: Compact Buttons & 60FPS Lag-Free) */
   #faq {
     padding-block: clamp(2.5rem, 8vw, 3.5rem);
@@ -4720,7 +4207,7 @@ html.js .reveal.is-visible {
   background-size: cover;
   background-position: center;
 }
-.video-element, .features-media-video { background: #080808; }
+.video-element, .features-media-img { background: #080808; }
 .video-play-btn[disabled] { opacity: .35; cursor: not-allowed; pointer-events: none; }
 .logo-tag { letter-spacing: .12em; }
 
@@ -4746,7 +4233,6 @@ html.js .reveal.is-visible {
     <nav class="nav-links" aria-label="Primary Navigation">
       <a href="#programs">Programs</a>
       <a href="#tour">Facility Tour</a>
-      <a href="#transformations">Progress</a>
       <a href="#pricing">Pricing</a>
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
@@ -4785,10 +4271,6 @@ html.js .reveal.is-visible {
     </a>
     <a href="#tour" class="mobile-nav-link">
       <span>Facility Tour</span>
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-    </a>
-    <a href="#transformations" class="mobile-nav-link">
-      <span>Transformations</span>
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
     </a>
     <a href="#pricing" class="mobile-nav-link">
@@ -5291,197 +4773,28 @@ html.js .reveal.is-visible {
   </section>
 
   <!-- ===================================================================
-       4. REAL PEOPLE REAL PROGRESS (Transformations Horizontal Scroller)
-       Before / After image placeholders, responsive cards
+       5. FEATURES MEDIA (animated logo reveal)
+       Loads a light static poster first. The animation (WebP, GIF fallback)
+       is fetched only near the viewport and plays only while visible
+       (see "Features media loader" in the script). To change the media,
+       edit the three paths on the <img>. Ratio/size: :root --features-media-* vars.
        =================================================================== -->
-  <section class="section-pad" id="transformations" style="border-bottom: 1px solid var(--border-subtle);">
+  <section class="features-section" id="features" aria-label="Tiger Fitness media">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Real Transformations</span>
-        <h2 class="h2">Member Stories, Shared With Permission.</h2>
-        <p class="section-sub">Member stories will be added only when Tiger Fitness supplies and approves authentic photos and details.</p>
-      </div>
-
-      <div class="carousel-wrap reveal">
-        <div class="carousel-track" id="transformTrack">
-          
-          <!-- Transformation Card 1: Fat Loss Program -->
-          <div class="transform-card">
-            <div class="transform-card-top">
-              <div class="transform-placeholder-box">
-                <span class="transform-placeholder-text">Owner-approved member photo pending</span>
-              </div>
-              <div class="transform-card-main">
-                <h3 class="transform-result-title">Member Story</h3>
-                <p class="transform-result-sub">Awaiting owner-approved details</p>
-              </div>
-            </div>
-            <div class="transform-card-footer">
-              <span class="transform-member-name">Member story pending</span>
-              <span class="transform-program-name">Weight-management goal</span>
-            </div>
-          </div>
-
-          <!-- Transformation Card 2: Muscle Building -->
-          <div class="transform-card">
-            <div class="transform-card-top">
-              <div class="transform-placeholder-box">
-                <span class="transform-placeholder-text">Owner-approved member photo pending</span>
-              </div>
-              <div class="transform-card-main">
-                <h3 class="transform-result-title">Member Story</h3>
-                <p class="transform-result-sub">Awaiting owner-approved details</p>
-              </div>
-            </div>
-            <div class="transform-card-footer">
-              <span class="transform-member-name">Member story pending</span>
-              <span class="transform-program-name">Muscle-building goal</span>
-            </div>
-          </div>
-
-          <!-- Transformation Card 3: Beginner Program -->
-          <div class="transform-card">
-            <div class="transform-card-top">
-              <div class="transform-placeholder-box">
-                <span class="transform-placeholder-text">Owner-approved member photo pending</span>
-              </div>
-              <div class="transform-card-main">
-                <h3 class="transform-result-title">Member Story</h3>
-                <p class="transform-result-sub">Awaiting owner-approved details</p>
-              </div>
-            </div>
-            <div class="transform-card-footer">
-              <span class="transform-member-name">Member story pending</span>
-              <span class="transform-program-name">Beginner goal</span>
-            </div>
-          </div>
-
-          <!-- Transformation Card 4: Strength Training -->
-          <div class="transform-card">
-            <div class="transform-card-top">
-              <div class="transform-placeholder-box">
-                <span class="transform-placeholder-text">Owner-approved member photo pending</span>
-              </div>
-              <div class="transform-card-main">
-                <h3 class="transform-result-title">Member Story</h3>
-                <p class="transform-result-sub">Awaiting owner-approved details</p>
-              </div>
-            </div>
-            <div class="transform-card-footer">
-              <span class="transform-member-name">Member story pending</span>
-              <span class="transform-program-name">Strength goal</span>
-            </div>
-          </div>
-
+      <figure class="features-media reveal" aria-label="Tiger Fitness animated logo reveal">
+        <div class="features-media-frame">
+          <img class="features-media-img"
+               id="featuresMedia"
+               src="assets/tiger-features-poster-640.webp"
+               data-anim-webp="assets/tiger-features-640.webp"
+               data-anim-gif="assets/tiger-features-640.gif"
+               alt="Tiger Fitness logo reveal followed by conceptual artwork of an athlete lifting a dumbbell"
+               width="640"
+               height="640"
+               loading="lazy"
+               decoding="async">
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================================================================
-       5. GYM FEATURES SECTION (Infinite Auto-Scrolling Marquee)
-       "What Members Mention"
-       =================================================================== -->
-  <section class="features-section" id="features" aria-labelledby="featuresHeading">
-    <div class="wrap">
-      <div class="features-header-row reveal">
-        <div class="features-header-text">
-          <span class="eyebrow">FEATURES</span>
-          <h2 class="h2 features-heading" id="featuresHeading">What Members Mention</h2>
-        </div>
-      </div>
-
-      <div class="features-layout-grid reveal">
-        <!-- 1:1 Video Media Frame -->
-        <figure class="features-media" aria-label="Tiger Fitness media placeholder">
-          <div class="features-media-frame">
-            <video class="features-media-video"
-                   muted
-                   loop
-                   playsinline
-                   preload="none"
-                   poster="assets/tiger-media-pending.svg"
-                   width="512"
-                   height="512"
-                   aria-hidden="true"
-                   tabindex="-1"
-                   disablepictureinpicture
-                   disableremoteplayback>
-            </video>
-          </div>
-        </figure>
-
-        <!-- Marquee Viewport & Track -->
-        <div class="features-marquee-wrapper" id="featuresMarqueeWrapper" role="region" aria-label="Gym features" tabindex="0" aria-describedby="featuresKbHint">
-          <div class="features-edge-fade features-edge-start" aria-hidden="true"></div>
-          <div class="features-edge-fade features-edge-end" aria-hidden="true"></div>
-
-          <ul class="features-track" id="featuresTrack">
-            <li class="feature-card">
-              <div class="feature-icon-tile" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
-              </div>
-              <span class="feature-title">Positive staff behaviour mentioned in reviews</span>
-            </li>
-            <li class="feature-card">
-              <div class="feature-icon-tile" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><polyline points="21 15 21 21 15 21"/><polyline points="3 9 3 3 9 3"/></svg>
-              </div>
-              <span class="feature-title">Positive workout experience mentioned</span>
-            </li>
-            <li class="feature-card">
-              <div class="feature-icon-tile" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="2" height="16" rx="1"/><rect x="17" y="4" width="2" height="16" rx="1"/><rect x="1" y="8" width="2" height="8" rx="1"/><rect x="21" y="8" width="2" height="8" rx="1"/><line x1="7" y1="12" x2="17" y2="12"/></svg>
-              </div>
-              <span class="feature-title">Equipment variety mentioned in reviews</span>
-            </li>
-            <li class="feature-card">
-              <div class="feature-icon-tile" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              </div>
-              <span class="feature-title">Gym equipment and machines</span>
-            </li>
-
-            <!-- Source: Website FAQ Q7 ("Is there parking space available? Dedicated parking space for both two-wheelers and four-wheelers") -->
-            <li class="feature-card">
-              <div class="feature-icon-tile" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
-              </div>
-              <span class="feature-title">Ask about parking availability</span>
-            </li>
-
-            <!-- Source: Google Review (Pooja Kumari: "Clean washrooms, great locker facility") & FAQ Q6 -->
-            <li class="feature-card">
-              <div class="feature-icon-tile" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              </div>
-              <span class="feature-title">Ask about washroom and locker facilities</span>
-            </li>
-            <li class="feature-card">
-              <div class="feature-icon-tile" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <span class="feature-title">Ask about women's timings and arrangements</span>
-            </li>
-            <li class="feature-card">
-              <div class="feature-icon-tile" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-              </div>
-              <span class="feature-title">Welcoming workout environment mentioned</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Desktop Controls Column (Prev / Next Buttons) -->
-        <div class="features-controls" aria-label="Gym features navigation">
-          <button type="button" class="features-ctrl-btn features-ctrl-prev" aria-label="Previous feature" aria-controls="featuresTrack" data-elev8-impact="none">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
-          </button>
-          <button type="button" class="features-ctrl-btn features-ctrl-next" aria-label="Next feature" aria-controls="featuresTrack" data-elev8-impact="none">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-        </div>
-      </div>
+      </figure>
     </div>
   </section>
 
@@ -5931,7 +5244,6 @@ html.js .reveal.is-visible {
       <div class="footer-links-list">
         <a href="#programs">Training Programs</a>
         <a href="#tour">Facility Tour</a>
-        <a href="#transformations">Member Transformations</a>
         <a href="#pricing">Membership Pricing</a>
         <a href="#reviews">Google Reviews</a>
         <a href="#faq">FAQ</a>
@@ -7513,508 +6825,70 @@ html.js .reveal.is-visible {
   });
 
   /* ===================================================================
-     5. GYM FEATURES - DUAL-AXIS PHYSICS MARQUEE & VIDEO ENGINE
-     One requestAnimationFrame Physics Loop, Modulo Wrap,
-     1:1 Pointer Tracking, Inertial Coast & Decay,
-     Accruing Desktop Steppers, Video Preload & Autoplay Lifecycle
+     5. Features media loader
+     - Static poster is the default (works with no JS, reduced motion,
+       Save-Data and 2G).
+     - Animation is preloaded ~300px before the section scrolls in, so it
+       starts without a blank frame; WebP first, GIF only if WebP fails.
+     - It plays only while the media is on screen and swaps back to the
+       poster when scrolled away or the tab is hidden (frees decoding
+       and battery). Re-entering replays the reveal from frame one.
      =================================================================== */
-  function initFeaturesMarquee() {
-    var section = document.getElementById("features");
-    var track = document.getElementById("featuresTrack");
-    var wrapper = document.getElementById("featuresMarqueeWrapper") || (track ? track.parentElement : null);
-    var video = section ? section.querySelector(".features-media-video") : null;
-    var prevBtn = section ? section.querySelector(".features-ctrl-prev") : null;
-    var nextBtn = section ? section.querySelector(".features-ctrl-next") : null;
-    if (!section || !track || !wrapper) return;
+  (function initFeaturesMedia() {
+    var img = document.getElementById("featuresMedia");
+    if (!img || !("IntersectionObserver" in window)) return;
 
-    var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) {
-      if (video) {
-        video.removeAttribute("autoplay");
-        try { video.pause(); } catch (e) {}
-      }
-      return;
+    var still = img.getAttribute("src");
+    var sources = [img.getAttribute("data-anim-webp"), img.getAttribute("data-anim-gif")].filter(Boolean);
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var conn = navigator.connection || {};
+    if (reduced.matches || conn.saveData || /(^|-)2g$/.test(conn.effectiveType || "")) return;
+
+    var readyUrl = null, loading = false, failed = false;
+    var inView = false, playing = false;
+
+    function preload(index) {
+      if (index >= sources.length) { failed = true; loading = false; return; }
+      var probe = new Image();
+      probe.onload = function () {
+        readyUrl = sources[index];
+        loading = false;
+        update();
+      };
+      probe.onerror = function () { preload(index + 1); };
+      probe.src = sources[index];
     }
 
-    var originalCards = Array.from(track.children);
-    var originalCount = originalCards.length;
-    if (originalCount < 6) return;
-
-    var desktopMq = window.matchMedia("(min-width: 1024px) and (hover: hover) and (pointer: fine)");
-    var isDesktop = desktopMq.matches;
-
-    // Physics State
-    var offset = 0;              // Continuous scroll distance in px along active axis
-    var velocity = 0;            // Current velocity in px/s
-    var currentSetSize = 0;      // Height (desktop) or Width (mobile) of 1 card set
-    var isDragging = false;
-    var isCoasting = false;
-    var isFlingCooldown = false;
-    var isSectionIntersecting = true;
-    var isVisible = true;
-    var isRunning = false;
-
-    // Accruing Step State (Buttons & Keyboard Navigation)
-    var remainingStepDelta = 0;
-
-    var rafId = null;
-    var lastTime = null;
-    var resumeTimer = null;
-
-    // Pointer Tracking
-    var activePointerId = null;
-    var lastPointerCoord = 0;
-    var pointerSamples = [];
-
-    // Video State
-    var videoIsNear = false;
-
-    function getBaseSpeed() {
-      return isDesktop ? 32 : (window.innerWidth <= 640 ? 40 : 45);
+    function load() {
+      if (readyUrl || loading || failed) return;
+      loading = true;
+      preload(0);
     }
 
-    function getCardStep() {
-      if (originalCards[0]) {
-        var style = window.getComputedStyle(originalCards[0]);
-        if (isDesktop) {
-          var mb = parseFloat(style.marginBlockEnd || style.marginBottom) || 12;
-          return originalCards[0].offsetHeight + mb;
-        } else {
-          var mr = parseFloat(style.marginInlineEnd || style.marginRight) || 12;
-          return originalCards[0].offsetWidth + mr;
-        }
-      }
-      return isDesktop ? 96 : 240;
-    }
-
-    function createCloneSet() {
-      originalCards.forEach(function(card) {
-        var clone = card.cloneNode(true);
-        clone.setAttribute("aria-hidden", "true");
-        clone.removeAttribute("id");
-        clone.classList.add("is-clone");
-        clone.querySelectorAll("[id]").forEach(function(el) { el.removeAttribute("id"); });
-        clone.querySelectorAll("button, a, input, select, textarea, [tabindex]").forEach(function(el) {
-          el.setAttribute("tabindex", "-1");
-        });
-        track.appendChild(clone);
-      });
-    }
-
-    function render() {
-      if (currentSetSize <= 0) return;
-      var renderOffset = ((offset % currentSetSize) + currentSetSize) % currentSetSize;
-      if (isDesktop) {
-        track.style.transform = "translate3d(0, -" + renderOffset.toFixed(3) + "px, 0)";
-      } else {
-        track.style.transform = "translate3d(-" + renderOffset.toFixed(3) + "px, 0, 0)";
+    function update() {
+      var shouldPlay = inView && !document.hidden && !reduced.matches && !!readyUrl;
+      if (shouldPlay && !playing) {
+        playing = true;
+        img.src = readyUrl;
+      } else if (!shouldPlay && playing) {
+        playing = false;
+        img.src = still;
       }
     }
 
-    function setupTrack(preserveProgress) {
-      var prevPhase = 0;
-      if (preserveProgress && currentSetSize > 0) {
-        prevPhase = (((offset % currentSetSize) + currentSetSize) % currentSetSize) / currentSetSize;
-      }
+    new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) load();
+    }, { rootMargin: "300px 0px" }).observe(img);
 
-      // Remove any existing clones
-      var allCards = Array.from(track.children);
-      for (var i = originalCount; i < allCards.length; i++) {
-        track.removeChild(allCards[i]);
-      }
+    new IntersectionObserver(function (entries) {
+      inView = entries[0].isIntersecting;
+      if (inView) load();
+      update();
+    }, { threshold: 0.35 }).observe(img);
 
-      wrapper.classList.add("is-marquee-active");
-
-      // Create Set 2 to measure exact unrounded distance
-      createCloneSet();
-
-      var set1First = originalCards[0];
-      var set2First = track.children[originalCount];
-      var rect1 = set1First.getBoundingClientRect();
-      var rect2 = set2First.getBoundingClientRect();
-
-      var measuredSetSize = 0;
-      if (isDesktop) {
-        measuredSetSize = rect2.top - rect1.top;
-        if (measuredSetSize <= 0) {
-          measuredSetSize = originalCards.reduce(function(acc, card) {
-            var style = window.getComputedStyle(card);
-            var mb = parseFloat(style.marginBlockEnd || style.marginBottom) || 12;
-            return acc + card.offsetHeight + mb;
-          }, 0);
-        }
-      } else {
-        measuredSetSize = rect2.left - rect1.left;
-        if (measuredSetSize <= 0) {
-          measuredSetSize = originalCards.reduce(function(acc, card) {
-            var style = window.getComputedStyle(card);
-            var mr = parseFloat(style.marginInlineEnd || style.marginRight) || 12;
-            return acc + card.offsetWidth + mr;
-          }, 0);
-        }
-      }
-      currentSetSize = measuredSetSize;
-
-      // Ensure track fills at least containerLength * 2 + setSize
-      var containerLength = isDesktop ? (wrapper.clientHeight || 538) : (wrapper.clientWidth || window.innerWidth);
-      var targetLength = containerLength * 2;
-      var currentTrackSize = currentSetSize * 2;
-      while (currentTrackSize < targetLength + currentSetSize) {
-        createCloneSet();
-        currentTrackSize += currentSetSize;
-      }
-
-      if (preserveProgress && prevPhase > 0) {
-        offset = prevPhase * currentSetSize;
-      }
-
-      render();
-    }
-
-    function tick(now) {
-      if (!isRunning) return;
-      rafId = requestAnimationFrame(tick);
-
-      if (!lastTime) {
-        lastTime = now;
-        return;
-      }
-      var dt = Math.min((now - lastTime) / 1000, 0.05);
-      lastTime = now;
-
-      if (isDragging) {
-        return;
-      }
-
-      // Additive step tween (from buttons or keyboard arrows)
-      if (Math.abs(remainingStepDelta) > 0.001) {
-        var stepMovement = remainingStepDelta * (1 - Math.exp(-dt / 0.12));
-        if (Math.abs(remainingStepDelta) < 0.5) {
-          stepMovement = remainingStepDelta;
-          remainingStepDelta = 0;
-        } else {
-          remainingStepDelta -= stepMovement;
-        }
-        offset += stepMovement;
-      }
-
-      var baseSpeed = getBaseSpeed();
-      var targetVelocity = isFlingCooldown ? 0 : baseSpeed;
-
-      if (isCoasting) {
-        velocity *= Math.exp(-dt / 0.35);
-        offset += velocity * dt;
-        render();
-
-        if (Math.abs(velocity) < 5) {
-          isCoasting = false;
-          velocity = 0;
-        }
-      } else {
-        var tau = (targetVelocity === 0) ? 0.35 : 0.5;
-        velocity += (targetVelocity - velocity) * (1 - Math.exp(-dt / tau));
-        offset += velocity * dt;
-        render();
-      }
-    }
-
-    function startLoop() {
-      if (isRunning) return;
-      isRunning = true;
-      lastTime = performance.now();
-      rafId = requestAnimationFrame(tick);
-    }
-
-    function stopLoop() {
-      if (!isRunning) return;
-      isRunning = false;
-      if (rafId) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
-      }
-    }
-
-    // Step function for buttons and keyboard navigation
-    function triggerStep(directionMultiplier) {
-      var step = getCardStep() * directionMultiplier;
-      remainingStepDelta += step;
-    }
-
-    if (prevBtn) {
-      prevBtn.addEventListener("click", function(e) {
-        e.preventDefault();
-        triggerStep(-1);
-      });
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener("click", function(e) {
-        e.preventDefault();
-        triggerStep(1);
-      });
-    }
-
-    // Initialize track
-    setupTrack(false);
-    startLoop();
-
-    if (document.fonts) {
-      document.fonts.ready.then(function() {
-        setupTrack(true);
-      });
-    }
-
-    // Mode Switching Handler
-    function handleModeChange() {
-      var newIsDesktop = desktopMq.matches;
-      if (newIsDesktop !== isDesktop) {
-        isDesktop = newIsDesktop;
-        setupTrack(true);
-      }
-    }
-    if (desktopMq.addEventListener) {
-      desktopMq.addEventListener("change", handleModeChange);
-    } else if (desktopMq.addListener) {
-      desktopMq.addListener(handleModeChange);
-    }
-
-    // Resize Observer
-    var lastW = wrapper.clientWidth;
-    var lastH = wrapper.clientHeight;
-    if (window.ResizeObserver) {
-      var ro = new ResizeObserver(function(entries) {
-        for (var i = 0; i < entries.length; i++) {
-          var newW = Math.round(entries[i].contentRect.width);
-          var newH = Math.round(entries[i].contentRect.height);
-          if ((newW !== lastW && newW > 0) || (newH !== lastH && newH > 0)) {
-            lastW = newW;
-            lastH = newH;
-            setupTrack(true);
-          }
-        }
-      });
-      ro.observe(wrapper);
-    } else {
-      window.addEventListener("resize", function() {
-        var newW = wrapper.clientWidth;
-        var newH = wrapper.clientHeight;
-        if (newW !== lastW || newH !== lastH) {
-          lastW = newW;
-          lastH = newH;
-          setupTrack(true);
-        }
-      }, { passive: true });
-    }
-
-    // Pointer Drag & Inertia
-    wrapper.addEventListener("pointerdown", function(e) {
-      if (activePointerId !== null) return;
-      activePointerId = e.pointerId;
-      try {
-        wrapper.setPointerCapture(e.pointerId);
-      } catch (err) {}
-
-      isDragging = true;
-      isCoasting = false;
-      isFlingCooldown = false;
-      remainingStepDelta = 0;
-      if (resumeTimer) {
-        clearTimeout(resumeTimer);
-        resumeTimer = null;
-      }
-
-      velocity = 0;
-      lastPointerCoord = isDesktop ? e.clientY : e.clientX;
-      var now = performance.now();
-      pointerSamples = [{ pos: lastPointerCoord, t: now }];
-      wrapper.classList.add("is-dragging");
-    });
-
-    wrapper.addEventListener("pointermove", function(e) {
-      if (!isDragging || e.pointerId !== activePointerId) return;
-
-      var currentCoord = isDesktop ? e.clientY : e.clientX;
-      var delta = currentCoord - lastPointerCoord;
-      lastPointerCoord = currentCoord;
-      offset -= delta; // 1:1 direct dragging
-      render();
-
-      var now = performance.now();
-      pointerSamples.push({ pos: currentCoord, t: now });
-      while (pointerSamples.length > 1 && (now - pointerSamples[0].t) > 100) {
-        pointerSamples.shift();
-      }
-    });
-
-    function handlePointerEnd(e) {
-      if (e.pointerId !== activePointerId) return;
-      try {
-        if (wrapper.hasPointerCapture && wrapper.hasPointerCapture(e.pointerId)) {
-          wrapper.releasePointerCapture(e.pointerId);
-        }
-      } catch (err) {}
-
-      activePointerId = null;
-      isDragging = false;
-      wrapper.classList.remove("is-dragging");
-
-      var releaseVelocity = 0;
-      if (pointerSamples.length >= 2) {
-        var first = pointerSamples[0];
-        var last = pointerSamples[pointerSamples.length - 1];
-        var dt = (last.t - first.t) / 1000;
-        var dPos = last.pos - first.pos;
-        if (dt > 0.005) {
-          releaseVelocity = -dPos / dt;
-        }
-      }
-      pointerSamples = [];
-
-      releaseVelocity = Math.max(-2500, Math.min(2500, releaseVelocity));
-
-      if (Math.abs(releaseVelocity) > 40) {
-        isCoasting = true;
-        velocity = releaseVelocity;
-      } else {
-        velocity = 0;
-      }
-
-      isFlingCooldown = true;
-      if (resumeTimer) clearTimeout(resumeTimer);
-      resumeTimer = setTimeout(function() {
-        isFlingCooldown = false;
-      }, 500);
-    }
-
-    wrapper.addEventListener("pointerup", handlePointerEnd);
-    wrapper.addEventListener("pointercancel", handlePointerEnd);
-
-    // Keyboard Arrow Navigation
-    wrapper.addEventListener("keydown", function(e) {
-      if (isDesktop) {
-        if (e.key === "ArrowUp") {
-          e.preventDefault();
-          triggerStep(-1);
-        } else if (e.key === "ArrowDown") {
-          e.preventDefault();
-          triggerStep(1);
-        }
-      } else {
-        if (e.key === "ArrowLeft") {
-          e.preventDefault();
-          triggerStep(-1);
-        } else if (e.key === "ArrowRight") {
-          e.preventDefault();
-          triggerStep(1);
-        }
-      }
-    });
-
-    // Video Lifecycle & Race-Free Observers
-    var playPending = false;
-
-    function safePlayVideo() {
-      if (prefersReduced || !video || !video.querySelector("source") || !videoIsNear || document.hidden) return;
-      if (!video.paused || playPending) return;
-      playPending = true;
-      var p = video.play();
-      if (p !== undefined) {
-        p.then(function() {
-          playPending = false;
-          if (!videoIsNear || document.hidden) {
-            safePauseVideo();
-          }
-        }).catch(function(err) {
-          playPending = false;
-          if (err && err.name !== "AbortError" && err.name !== "NotAllowedError") {
-            console.warn("Features video:", err);
-          }
-        });
-      } else {
-        playPending = false;
-      }
-    }
-
-    function safePauseVideo() {
-      if (!video) return;
-      if (playPending) return;
-      if (!video.paused) {
-        video.pause();
-      }
-    }
-
-    var mediaFrame = section ? (section.querySelector(".features-media") || video) : video;
-
-    if (video && window.IntersectionObserver) {
-      // 1. Preload Observer (300px rootMargin)
-      var preloadObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            if (video.getAttribute("preload") !== "auto") {
-              video.setAttribute("preload", "auto");
-            }
-            preloadObserver.disconnect();
-          }
-        });
-      }, { rootMargin: "300px" });
-      preloadObserver.observe(mediaFrame);
-
-      // 2. Playback Observer (threshold: 0.35 on the media frame)
-      var playObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          videoIsNear = entry.isIntersecting;
-          if (videoIsNear) {
-            safePlayVideo();
-          } else {
-            safePauseVideo();
-          }
-        });
-      }, { threshold: 0.35 });
-      playObserver.observe(mediaFrame);
-    }
-
-    // Section Animation Loop Observer
-    if (window.IntersectionObserver) {
-      var io = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          isSectionIntersecting = entry.isIntersecting;
-          isVisible = isSectionIntersecting && !document.hidden;
-          if (isVisible) {
-            startLoop();
-            if (videoIsNear) safePlayVideo();
-          } else {
-            stopLoop();
-            safePauseVideo();
-          }
-        });
-      }, { rootMargin: "100px" });
-      io.observe(section);
-    }
-
-    document.addEventListener("visibilitychange", function() {
-      isVisible = !document.hidden && isSectionIntersecting;
-      if (isVisible) {
-        startLoop();
-        if (videoIsNear) safePlayVideo();
-      } else {
-        stopLoop();
-        safePauseVideo();
-      }
-    });
-
-    window.addEventListener("pageshow", function() {
-      isVisible = !document.hidden && isSectionIntersecting;
-      if (isVisible) {
-        startLoop();
-        if (videoIsNear) safePlayVideo();
-      }
-    });
-
-  }
-  if (window.requestIdleCallback) {
-    requestIdleCallback(initFeaturesMarquee);
-  } else {
-    setTimeout(initFeaturesMarquee, 100);
-  }
+    document.addEventListener("visibilitychange", update);
+    if (reduced.addEventListener) reduced.addEventListener("change", update);
+  })();
 
   /* 13. TIGER IMPACT Hover & Dumbbell Burst Interaction Engine */
   function getButtonImpactLevel(btn) {
