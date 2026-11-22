@@ -76,10 +76,10 @@
   --shadow-card-hover: 0 12px 30px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
 
   /* Preserved template accent tokens (provisional; confirm Tiger Fitness brand colours) */
-  --elev8-amber:       #F0A83F;
-  --elev8-amber-hover: #F8B855;
-  --elev8-amber-glow:  rgba(240, 168, 63, 0.32);
-  --elev8-amber-subtle:rgba(240, 168, 63, 0.12);
+  --tiger-amber:       #F0A83F;
+  --tiger-amber-hover: #F8B855;
+  --tiger-amber-glow:  rgba(240, 168, 63, 0.32);
+  --tiger-amber-subtle:rgba(240, 168, 63, 0.12);
   --ascend-green:      #2BB673;
   --ascend-green-glow: rgba(43, 182, 115, 0.28);
   --bg-deep-black:     #0A0B0C;
@@ -356,7 +356,7 @@ textarea,
    - Click/Tap: Tactile button press + miniature dumbbell particle burst
    - Hardware-accelerated composite only (transform, opacity) | CLS = 0
    ===================================================================== */
-.elev8-impact,
+.tiger-impact,
 .btn-hero-primary,
 .btn-hero-trial,
 .btn-nav-join,
@@ -374,7 +374,7 @@ textarea,
 }
 
 /* Light slash sweep pseudo-element */
-.elev8-impact::after,
+.tiger-impact::after,
 .btn-hero-primary::after,
 .btn-hero-trial::after,
 .btn-nav-join::after,
@@ -411,7 +411,7 @@ textarea,
 
 /* Hover trigger for desktop - runs ONCE on pointer enter */
 @media (hover: hover) {
-  .elev8-impact:hover::after,
+  .tiger-impact:hover::after,
   .btn-hero-primary:hover::after,
   .btn-hero-trial:hover::after,
   .btn-nav-join:hover::after,
@@ -423,7 +423,7 @@ textarea,
   .btn-call:hover::after,
   .program-action:hover::after,
   .program-modal-whatsapp:hover::after {
-    animation: elev8SlashSweep 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: tigerSlashSweep 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 }
 
@@ -442,7 +442,7 @@ textarea,
   );
 }
 
-@keyframes elev8SlashSweep {
+@keyframes tigerSlashSweep {
   0% {
     transform: translateX(-180%) skewX(-28deg);
     opacity: 0;
@@ -460,7 +460,7 @@ textarea,
 }
 
 /* Tactile Physical Press Compression & Micro-Flash */
-.elev8-impact:active,
+.tiger-impact:active,
 .btn-hero-primary:active,
 .btn-hero-trial:active,
 .btn-nav-join:active,
@@ -478,16 +478,16 @@ textarea,
 }
 
 /* Temporary micro-flash class added on click/tap for instantaneous response */
-.elev8-btn-flash {
-  animation: elev8MicroFlash 0.22s ease-out;
+.tiger-btn-flash {
+  animation: tigerMicroFlash 0.22s ease-out;
 }
-@keyframes elev8MicroFlash {
+@keyframes tigerMicroFlash {
   0% { filter: brightness(1.22); }
   100% { filter: brightness(1); }
 }
 
 /* Miniature Dumbbell Particle Styling */
-.elev8-dumbbell-particle {
+.tiger-dumbbell-particle {
   position: fixed;
   pointer-events: none;
   z-index: 99999;
@@ -495,17 +495,17 @@ textarea,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  animation: elev8DumbbellFly var(--fly-dur, 650ms) cubic-bezier(0.12, 0.8, 0.32, 1) forwards;
+  animation: tigerDumbbellFly var(--fly-dur, 650ms) cubic-bezier(0.12, 0.8, 0.32, 1) forwards;
 }
 
-.elev8-dumbbell-particle svg {
+.tiger-dumbbell-particle svg {
   display: block;
   width: 100%;
   height: 100%;
   filter: drop-shadow(0 0 3px rgba(240, 168, 63, 0.55));
 }
 
-@keyframes elev8DumbbellFly {
+@keyframes tigerDumbbellFly {
   0% {
     opacity: 0;
     transform: translate3d(0, 0, 0) rotate(0deg) scale(0.5);
@@ -525,7 +525,7 @@ textarea,
 
 /* Accessibility: Honor prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
-  .elev8-impact::after,
+  .tiger-impact::after,
   .btn-hero-primary::after,
   .btn-hero-trial::after,
   .btn-nav-join::after,
@@ -540,11 +540,11 @@ textarea,
     display: none !important;
     animation: none !important;
   }
-  .elev8-dumbbell-particle {
+  .tiger-dumbbell-particle {
     display: none !important;
     animation: none !important;
   }
-  .elev8-btn-flash {
+  .tiger-btn-flash {
     animation: none !important;
   }
 }
@@ -692,7 +692,7 @@ html.nav-open .site-header {
   white-space: nowrap;
 }
 .nav-links a:hover {
-  color: var(--elev8-amber);
+  color: var(--tiger-amber);
 }
 .nav-links a::after {
   content: "";
@@ -701,7 +701,7 @@ html.nav-open .site-header {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--elev8-amber);
+  background: var(--tiger-amber);
   transition: width var(--dur-fast) ease;
 }
 .nav-links a:hover::after { width: 100%; }
@@ -728,30 +728,30 @@ html.nav-open .site-header {
   .nav-actions .btn-call { display: inline-flex; }
 }
 .nav-actions .btn-call:hover {
-  border-color: var(--elev8-amber);
-  color: var(--elev8-amber);
-  background: var(--elev8-amber-subtle);
+  border-color: var(--tiger-amber);
+  color: var(--tiger-amber);
+  background: var(--tiger-amber-subtle);
 }
 
 /* Responsive Join CTA Button */
 .btn-nav-join {
-  background: var(--elev8-amber);
+  background: var(--tiger-amber);
   color: var(--gold-ink);
   font-weight: 800;
-  border-color: var(--elev8-amber);
+  border-color: var(--tiger-amber);
   padding: 0.65rem 1.45rem;
   min-height: 44px;
   font-size: 0.92rem;
   letter-spacing: 0.02em;
-  box-shadow: 0 4px 16px var(--elev8-amber-glow);
+  box-shadow: 0 4px 16px var(--tiger-amber-glow);
   white-space: nowrap;
   flex-shrink: 0;
 }
 .btn-nav-join:hover {
-  background: var(--elev8-amber-hover);
-  border-color: var(--elev8-amber-hover);
+  background: var(--tiger-amber-hover);
+  border-color: var(--tiger-amber-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px var(--elev8-amber-glow);
+  box-shadow: 0 6px 22px var(--tiger-amber-glow);
 }
 .btn-join-text-short { display: none; }
 .btn-join-text-full { display: inline; }
@@ -817,7 +817,7 @@ html.nav-open .site-header {
 }
 .menu-toggle.is-open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
-  background: var(--elev8-amber);
+  background: var(--tiger-amber);
 }
 .menu-toggle.is-open span:nth-child(2) {
   opacity: 0;
@@ -825,7 +825,7 @@ html.nav-open .site-header {
 }
 .menu-toggle.is-open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
-  background: var(--elev8-amber);
+  background: var(--tiger-amber);
 }
 
 /* Premium Mobile Menu Drawer */
@@ -917,7 +917,7 @@ html.nav-open .site-header {
   font-family: var(--font-body);
   font-size: 0.68rem;
   font-weight: 600;
-  color: var(--elev8-amber);
+  color: var(--tiger-amber);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-top: 2px;
@@ -946,15 +946,15 @@ html.nav-open .site-header {
 .mobile-nav-link:hover,
 .mobile-nav-link:active,
 .mobile-nav-link.is-active {
-  color: var(--elev8-amber);
+  color: var(--tiger-amber);
   background: rgba(240, 168, 63, 0.07);
   transform: translateX(2px);
 }
 .mobile-nav-link:focus-visible {
-  outline: 2px solid var(--elev8-amber);
+  outline: 2px solid var(--tiger-amber);
   outline-offset: -1px;
   background: rgba(240, 168, 63, 0.08);
-  color: var(--elev8-amber);
+  color: var(--tiger-amber);
 }
 .mobile-nav-link svg {
   width: 15px;
@@ -967,7 +967,7 @@ html.nav-open .site-header {
 .mobile-nav-link:active svg,
 .mobile-nav-link.is-active svg,
 .mobile-nav-link:focus-visible svg {
-  color: var(--elev8-amber);
+  color: var(--tiger-amber);
   transform: translateX(2px);
 }
 .mobile-nav-footer {
@@ -997,14 +997,14 @@ html.nav-open .site-header {
   transform: scale(0.98);
 }
 .mobile-nav-footer .btn-whatsapp {
-  background: var(--elev8-amber);
+  background: var(--tiger-amber);
   color: var(--gold-ink);
-  border: 1px solid var(--elev8-amber);
-  box-shadow: 0 4px 14px var(--elev8-amber-glow);
+  border: 1px solid var(--tiger-amber);
+  box-shadow: 0 4px 14px var(--tiger-amber-glow);
 }
 .mobile-nav-footer .btn-whatsapp:hover {
-  background: var(--elev8-amber-hover);
-  border-color: var(--elev8-amber-hover);
+  background: var(--tiger-amber-hover);
+  border-color: var(--tiger-amber-hover);
 }
 .mobile-nav-footer .btn-outline {
   border-color: rgba(255, 255, 255, 0.16);
@@ -1012,9 +1012,9 @@ html.nav-open .site-header {
   background: rgba(255, 255, 255, 0.04);
 }
 .mobile-nav-footer .btn-outline:hover {
-  border-color: var(--elev8-amber);
-  color: var(--elev8-amber);
-  background: var(--elev8-amber-subtle);
+  border-color: var(--tiger-amber);
+  color: var(--tiger-amber);
+  background: var(--tiger-amber-subtle);
 }
 .mobile-nav-info {
   margin-top: 0.55rem;
@@ -4960,7 +4960,7 @@ html.js .reveal.is-visible {
       </div>
 
       <div class="reviews-carousel-outer reveal">
-        <button type="button" class="reviews-floating-btn reviews-prev-btn" id="reviewsPrevBtn" aria-label="Previous review theme" data-elev8-impact="none">
+        <button type="button" class="reviews-floating-btn reviews-prev-btn" id="reviewsPrevBtn" aria-label="Previous review theme" data-tiger-impact="none">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
         <div class="reviews-modern-track" id="reviewTrack">
@@ -4995,16 +4995,16 @@ html.js .reveal.is-visible {
             </div>
           </div>
         </div>
-        <button type="button" class="reviews-floating-btn reviews-next-btn" id="reviewsNextBtn" aria-label="Next review theme" data-elev8-impact="none">
+        <button type="button" class="reviews-floating-btn reviews-next-btn" id="reviewsNextBtn" aria-label="Next review theme" data-tiger-impact="none">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </button>
       </div>
       <div class="reviews-phone-nav" aria-label="Review theme navigation">
-        <button type="button" class="reviews-phone-btn reviews-phone-prev" aria-label="Previous review theme" aria-controls="reviewTrack" data-elev8-impact="none">
+        <button type="button" class="reviews-phone-btn reviews-phone-prev" aria-label="Previous review theme" aria-controls="reviewTrack" data-tiger-impact="none">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
         <span class="reviews-phone-count" aria-hidden="true">1 / 3</span>
-        <button type="button" class="reviews-phone-btn reviews-phone-next" aria-label="Next review theme" aria-controls="reviewTrack" data-elev8-impact="none">
+        <button type="button" class="reviews-phone-btn reviews-phone-next" aria-label="Next review theme" aria-controls="reviewTrack" data-tiger-impact="none">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </button>
       </div>
@@ -6894,11 +6894,11 @@ html.js .reveal.is-visible {
   function getButtonImpactLevel(btn) {
     if (!btn || typeof btn.matches !== "function") return null;
     // Level 4 (Utility / Functional Exclusions)
-    if (btn.matches(".program-modal__close, .carousel-btn, .menu-toggle, .faq-btn, #videoPlayBtn, .skip-link, [data-elev8-impact='none']")) {
+    if (btn.matches(".program-modal__close, .carousel-btn, .menu-toggle, .faq-btn, #videoPlayBtn, .skip-link, [data-tiger-impact='none']")) {
       return null;
     }
     // Explicit override attribute
-    var explicit = btn.getAttribute("data-elev8-impact");
+    var explicit = btn.getAttribute("data-tiger-impact");
     if (explicit === "strong" || explicit === "medium" || explicit === "subtle") {
       return explicit;
     }
@@ -6911,7 +6911,7 @@ html.js .reveal.is-visible {
       return "subtle";
     }
     // Level 2: Secondary Important CTAs (Medium impact)
-    if (btn.matches(".floating-whatsapp, .btn-call, .btn-primary, .btn-outline, .program-modal-whatsapp, .elev8-impact")) {
+    if (btn.matches(".floating-whatsapp, .btn-call, .btn-primary, .btn-outline, .program-modal-whatsapp, .tiger-impact")) {
       return "medium";
     }
     // General fallback for .btn styled links/buttons
@@ -6936,9 +6936,9 @@ html.js .reveal.is-visible {
     if (rect.width === 0 || rect.height === 0) return;
 
     // Brief tactile micro-flash on button surface
-    btn.classList.add("elev8-btn-flash");
+    btn.classList.add("tiger-btn-flash");
     setTimeout(function() {
-      btn.classList.remove("elev8-btn-flash");
+      btn.classList.remove("tiger-btn-flash");
     }, 220);
 
     // On touch/coarse devices, keep tactile micro-flash only; avoid spawning animated SVG DOM nodes during touch interactions
@@ -6971,7 +6971,7 @@ html.js .reveal.is-visible {
 
     for (var i = 0; i < count; i++) {
       var particle = document.createElement("span");
-      particle.className = "elev8-dumbbell-particle";
+      particle.className = "tiger-dumbbell-particle";
       particle.innerHTML = DUMBBELL_SVG;
 
       // Branded Color Selection
@@ -7030,7 +7030,7 @@ html.js .reveal.is-visible {
 
   // Global non-blocking click delegation for both desktop clicks and mobile taps
   document.addEventListener("click", function(e) {
-    var trigger = e.target.closest("button, a, .btn, .elev8-impact, [data-elev8-impact]");
+    var trigger = e.target.closest("button, a, .btn, .tiger-impact, [data-tiger-impact]");
     if (!trigger) return;
     var level = getButtonImpactLevel(trigger);
     if (!level) return;
