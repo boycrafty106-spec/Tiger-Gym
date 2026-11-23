@@ -12,19 +12,19 @@
 
 <!-- High-Priority Responsive LCP Hero Image Preload (Media Query Targeted) -->
 <link rel="preload" as="image"
-      href="assets/tiger-media-pending.svg"
+      href="assets/tiger-hero-bg-mobile.webp"
       media="(max-width: 767px)"
-      type="image/svg+xml"
+      type="image/webp"
       fetchpriority="high">
 <link rel="preload" as="image"
-      href="assets/tiger-media-pending.svg"
+      href="assets/tiger-hero-bg.webp"
       media="(min-width: 768px)"
-      type="image/svg+xml"
+      type="image/webp"
       fetchpriority="high">
 
 <!-- Gym Logo Favicon & Apple Touch Icon -->
-<link rel="icon" type="image/svg+xml" href="assets/tiger-wordmark-placeholder.svg">
-<link rel="apple-touch-icon" href="assets/tiger-wordmark-placeholder.svg">
+<link rel="icon" type="image/svg+xml" href="assets/tiger-logo-emblem.svg">
+<link rel="apple-touch-icon" href="assets/tiger-icon-180.png">
 
 <!-- Premium Typography: Asynchronous Non-Render-Blocking Load with Fallback -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1054,7 +1054,7 @@ html.nav-open .site-header {
   z-index: 0;
   pointer-events: none;
   background-image: 
-    url('assets/tiger-media-pending.svg');
+    url('assets/tiger-hero-bg-mobile.webp');
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
@@ -1065,7 +1065,7 @@ html.nav-open .site-header {
 }
 @media (min-width: 768px) {
   .hero-bg-media {
-    background-image: url('assets/tiger-media-pending.svg');
+    background-image: url('assets/tiger-hero-bg.webp');
     background-position: center 25%;
   }
 }
@@ -1421,7 +1421,7 @@ html.nav-open .site-header {
 .tour-bg-placeholder {
   position: absolute;
   inset: 0;
-  background-image: url('assets/tiger-media-pending.svg');
+  background-image: url('assets/tiger-tour-bg.webp');
   background-size: cover;
   background-position: center center;
   opacity: 0.12;
@@ -1429,7 +1429,7 @@ html.nav-open .site-header {
 }
 @media (min-width: 768px) {
   .tour-bg-placeholder {
-    background-image: url('assets/tiger-media-pending.svg');
+    background-image: url('assets/tiger-tour-bg.webp');
   }
 }
 .tour-bg-scrim {
@@ -3336,7 +3336,7 @@ body.modal-open {
   background-image:
     radial-gradient(ellipse at 50% 50%, rgba(5, 5, 5, 0.45) 0%, rgba(5, 5, 5, 0.28) 55%, rgba(5, 5, 5, 0.82) 100%),
     linear-gradient(180deg, rgba(5, 5, 5, 0.92) 0%, transparent 18%, transparent 82%, rgba(5, 5, 5, 0.95) 100%),
-    url('assets/tiger-media-pending.svg');
+    url('assets/tiger-faq-bg.webp');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3672,7 +3672,7 @@ body.modal-open {
   pointer-events: none;
   background-image:
     linear-gradient(180deg, #050505 0%, transparent 14%, transparent 86%, #050505 100%),
-    url('assets/tiger-media-pending.svg');
+    url('assets/tiger-cta-bg.webp');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3683,7 +3683,7 @@ body.modal-open {
   .final-cta-bg-layer {
     background-image:
       linear-gradient(180deg, #050505 0%, transparent 14%, transparent 86%, #050505 100%),
-      url('assets/tiger-media-pending.svg');
+      url('assets/tiger-cta-bg.webp');
   }
 }
 
@@ -4198,19 +4198,11 @@ html.js .reveal.is-visible {
   }
 }
 
-/* Tiger Fitness adaptation: preserve the master layout, but use honest media placeholders until the gym supplies original assets. */
-.hero-bg-media,
-.tour-bg-placeholder,
-.faq-bg-layer,
-.final-cta-bg-layer {
-  background-image: url('assets/tiger-media-pending.svg') !important;
-  background-size: cover;
-  background-position: center;
-}
 .video-element, .features-media-img { background: #080808; }
 .video-play-btn[disabled] { opacity: .35; cursor: not-allowed; pointer-events: none; }
 .logo-tag { letter-spacing: .12em; }
 
+.footer-bg img.footer-bg-img { object-fit: cover; }
 </style>
 </head>
 <body>
@@ -4223,7 +4215,7 @@ html.js .reveal.is-visible {
 <header class="site-header" id="siteHeader">
   <div class="wrap nav-row">
     <a href="#home" class="logo" aria-label="Tiger Fitness, Home">
-      <img src="assets/tiger-wordmark-placeholder.svg" alt="Temporary Tiger Fitness text lockup" class="logo-emblem" width="40" height="40" decoding="async">
+      <img src="assets/tiger-logo-emblem.svg" alt="Tiger Fitness logo" class="logo-emblem" width="40" height="40" decoding="async">
       <div class="logo-text-group">
         <span class="logo-main">TIGER</span>
         <span class="logo-tag">FITNESS</span>
@@ -4259,7 +4251,7 @@ html.js .reveal.is-visible {
 <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
   <div class="mobile-nav-inner">
     <div class="mobile-drawer-brand">
-      <img src="assets/tiger-wordmark-placeholder.svg" alt="Temporary Tiger Fitness text lockup" class="mobile-drawer-logo" width="34" height="34" decoding="async">
+      <img src="assets/tiger-logo-emblem.svg" alt="Tiger Fitness logo" class="mobile-drawer-logo" width="34" height="34" decoding="async">
       <div class="mobile-drawer-brand-text">
         <div class="mobile-drawer-title">TIGER FITNESS</div>
         <div class="mobile-drawer-sub">Patna's Premium Transformation Gym</div>
@@ -4307,7 +4299,7 @@ html.js .reveal.is-visible {
 
 
 <!-- IMPLEMENTATION STATUS: Tiger Fitness business content adapted from public listings.
-     Replace assets/tiger-media-pending.svg and assets/tiger-wordmark-placeholder.svg
+     Replace these images in assets/ with the owner's photos, keeping the same file names
      with owner-approved Tiger Fitness photos, videos and official logo before publishing.
      Hours, current fees, formal coaching packages, WhatsApp availability and social accounts
      require direct owner confirmation. -->
@@ -4330,7 +4322,7 @@ html.js .reveal.is-visible {
         <!-- Left Side: Bold Typography & CTAs -->
         <div class="hero-left-col">
           <div class="hero-eyebrow-tag">
-            <img src="assets/tiger-wordmark-placeholder.svg" alt="Tiger Fitness Crest" class="hero-eyebrow-logo" width="18" height="18" aria-hidden="true" decoding="async">
+            <img src="assets/tiger-logo-emblem.svg" alt="Tiger Fitness logo" class="hero-eyebrow-logo" width="18" height="18" aria-hidden="true" decoding="async">
             <span class="pulse-dot" aria-hidden="true"></span>
             <span>TRAIN WITH PURPOSE. &bull; BAHADURPUR, PATNA</span>
           </div>
@@ -4482,13 +4474,13 @@ html.js .reveal.is-visible {
       <div class="tour-video-container">
         <div class="tour-video-card" id="gymVideoCard" role="region" aria-label="Tiger Fitness Facility Tour Video">
           <div class="video-watermark-badge" aria-hidden="true">
-            <img src="assets/tiger-wordmark-placeholder.svg" alt="Tiger Fitness Crest" width="26" height="26" decoding="async">
+            <img src="assets/tiger-logo-emblem.svg" alt="Tiger Fitness logo" width="26" height="26" decoding="async">
             <span>TIGER</span>
           </div>
 
           <video class="video-element" id="tigerGymVideo" 
                  width="1920" height="1080"
-                 poster="assets/tiger-media-pending.svg" 
+                 poster="assets/tiger-tour-bg.webp" 
                  playsinline muted preload="none">
             Your browser does not support the video tag.
           </video>
@@ -4536,10 +4528,10 @@ html.js .reveal.is-visible {
             <!-- Program 1: Muscle Building -->
             <div class="program-card" data-original-index="0">
               <div class="program-thumb">
-                <img src="assets/tiger-media-pending.svg"
+                <img src="assets/tiger-program-muscle.webp"
                      sizes="(max-width: 639px) 240px, (max-width: 1023px) 44vw, 460px"
-                     alt="Tiger Fitness authentic photo pending owner approval"
-                     loading="lazy" decoding="async" width="735" height="779"
+                     alt=""
+                     loading="lazy" decoding="async" width="800" height="1000"
                      style="object-position: center 20%;">
                 <div class="program-thumb-overlay">
                   <h3 class="program-title">MUSCLE BUILDING</h3>
@@ -4579,10 +4571,10 @@ html.js .reveal.is-visible {
             <!-- Program 2: Fat Loss -->
             <div class="program-card" data-original-index="1">
               <div class="program-thumb">
-                <img src="assets/tiger-media-pending.svg"
+                <img src="assets/tiger-program-fitness.webp"
                      sizes="(max-width: 639px) 240px, (max-width: 1023px) 44vw, 460px"
-                     alt="Tiger Fitness authentic photo pending owner approval"
-                     loading="lazy" decoding="async" width="600" height="420">
+                     alt=""
+                     loading="lazy" decoding="async" width="800" height="1000">
                 <div class="program-thumb-overlay">
                   <h3 class="program-title">GENERAL FITNESS</h3>
                 </div>
@@ -4621,10 +4613,10 @@ html.js .reveal.is-visible {
             <!-- Program 3: Strength Training -->
             <div class="program-card" data-original-index="2">
               <div class="program-thumb">
-                <img src="assets/tiger-media-pending.svg"
+                <img src="assets/tiger-program-strength.webp"
                      sizes="(max-width: 639px) 240px, (max-width: 1023px) 44vw, 460px"
-                     alt="Tiger Fitness authentic photo pending owner approval"
-                     loading="lazy" decoding="async" width="600" height="420">
+                     alt=""
+                     loading="lazy" decoding="async" width="800" height="1000">
                 <div class="program-thumb-overlay">
                   <h3 class="program-title">STRENGTH TRAINING</h3>
                 </div>
@@ -4663,10 +4655,10 @@ html.js .reveal.is-visible {
             <!-- Program 4: Personal Training -->
             <div class="program-card" data-original-index="3">
               <div class="program-thumb">
-                <img src="assets/tiger-media-pending.svg"
+                <img src="assets/tiger-program-coaching.webp"
                      sizes="(max-width: 639px) 240px, (max-width: 1023px) 44vw, 460px"
-                     alt="Tiger Fitness authentic photo pending owner approval"
-                     loading="lazy" decoding="async" width="600" height="420">
+                     alt=""
+                     loading="lazy" decoding="async" width="800" height="1000">
                 <div class="program-thumb-overlay">
                   <h3 class="program-title">COACHING OPTIONS</h3>
                 </div>
@@ -4705,10 +4697,10 @@ html.js .reveal.is-visible {
             <!-- Program 5: Beginner Program -->
             <div class="program-card" data-original-index="4">
               <div class="program-thumb">
-                <img src="assets/tiger-media-pending.svg"
+                <img src="assets/tiger-program-beginner.webp"
                      sizes="(max-width: 639px) 240px, (max-width: 1023px) 44vw, 460px"
-                     alt="Tiger Fitness authentic photo pending owner approval"
-                     loading="lazy" decoding="async" width="735" height="985"
+                     alt=""
+                     loading="lazy" decoding="async" width="800" height="1000"
                      style="object-position: center 15%;">
                 <div class="program-thumb-overlay">
                   <h3 class="program-title">BEGINNER START</h3>
@@ -4773,26 +4765,28 @@ html.js .reveal.is-visible {
   </section>
 
   <!-- ===================================================================
-       5. FEATURES MEDIA (animated logo reveal)
-       Loads a light static poster first. The animation (WebP, GIF fallback)
-       is fetched only near the viewport and plays only while visible
-       (see "Features media loader" in the script). To change the media,
-       edit the three paths on the <img>. Ratio/size: :root --features-media-* vars.
+       5. FEATURES MEDIA (logo reveal video)
+       Files: assets/tiger-features.webm (played by most browsers),
+       assets/tiger-features.mp4 (backup for older iPhones and Safari),
+       assets/tiger-features-poster-640.webp (still shown before playback
+       and for reduced motion / Data Saver). Loads and plays only near the
+       viewport (see "Features media loader" in the script).
+       Ratio/size: :root --features-media-* vars.
        =================================================================== -->
-  <section class="features-section" id="features" aria-label="Tiger Fitness media">
+  <section class="features-section" id="features" aria-label="Tiger Fitness logo animation">
     <div class="wrap">
-      <figure class="features-media reveal" aria-label="Tiger Fitness animated logo reveal">
+      <figure class="features-media reveal" aria-label="Tiger Fitness logo animation">
         <div class="features-media-frame">
-          <img class="features-media-img"
-               id="featuresMedia"
-               src="assets/tiger-features-poster-640.webp"
-               data-anim-webp="assets/tiger-features-640.webp"
-               data-anim-gif="assets/tiger-features-640.gif"
-               alt="Tiger Fitness logo reveal followed by conceptual artwork of an athlete lifting a dumbbell"
-               width="640"
-               height="640"
-               loading="lazy"
-               decoding="async">
+          <video id="featuresMedia"
+                 class="features-media-img"
+                 poster="assets/tiger-features-poster-640.webp"
+                 width="720" height="720"
+                 muted loop playsinline preload="none"
+                 aria-label="Tiger Fitness logo animation">
+            <source src="assets/tiger-features.webm" type="video/webm">
+            <source src="assets/tiger-features.mp4" type="video/mp4">
+            <img src="assets/tiger-features-poster-640.webp" alt="Tiger Fitness logo">
+          </video>
         </div>
       </figure>
     </div>
@@ -4856,7 +4850,7 @@ html.js .reveal.is-visible {
         <div class="pricing-card featured pricing-card-committed">
           <!-- Isolated Card Background Layer -->
           <div class="pricing-card-bg" aria-hidden="true">
-            <img src="assets/tiger-media-pending.svg" alt="" class="pricing-card-bg-img" width="1792" height="2400" loading="lazy" decoding="async" draggable="false">
+            <img src="assets/tiger-pricing-bg.webp" alt="" class="pricing-card-bg-img" width="900" height="1200" loading="lazy" decoding="async" draggable="false">
             <div class="pricing-card-bg-scrim"></div>
           </div>
           <div class="featured-badge">&bull; Ask About Options &bull;</div>
@@ -5101,7 +5095,7 @@ html.js .reveal.is-visible {
           <!-- Address -->
           <div class="location-item">
             <div class="location-icon-brand" aria-hidden="true">
-              <img src="assets/tiger-wordmark-placeholder.svg" alt="Tiger Fitness Crest" width="32" height="32" class="location-logo-img" decoding="async">
+              <img src="assets/tiger-logo-emblem.svg" alt="Tiger Fitness logo" width="32" height="32" class="location-logo-img" decoding="async">
             </div>
             <div class="location-text">
               <div class="label">Official Facility</div>
@@ -5205,12 +5199,13 @@ html.js .reveal.is-visible {
            preload="none"
            aria-hidden="true">
     </video>
+    <img class="footer-bg-img" src="assets/tiger-footer-bg.webp" alt="" loading="lazy" decoding="async" width="1920" height="700">
   </div>
 
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <a href="#home" class="logo" aria-label="Tiger Fitness, Home">
-        <img src="assets/tiger-wordmark-placeholder.svg" alt="Temporary Tiger Fitness text lockup" class="logo-emblem" width="46" height="46" decoding="async">
+        <img src="assets/tiger-logo-emblem.svg" alt="Tiger Fitness logo" class="logo-emblem" width="46" height="46" decoding="async">
         <div class="logo-text-group">
           <span class="logo-main">TIGER</span>
           <span class="logo-tag">FITNESS</span>
@@ -6826,68 +6821,51 @@ html.js .reveal.is-visible {
 
   /* ===================================================================
      5. Features media loader
-     - Static poster is the default (works with no JS, reduced motion,
-       Save-Data and 2G).
-     - Animation is preloaded ~300px before the section scrolls in, so it
-       starts without a blank frame; WebP first, GIF only if WebP fails.
-     - It plays only while the media is on screen and swaps back to the
-       poster when scrolled away or the tab is hidden (frees decoding
-       and battery). Re-entering replays the reveal from frame one.
+     - Shows the poster by default. Nothing downloads until the video is
+       within 300px of the viewport.
+     - Plays only while at least 35% is on screen and the tab is visible,
+       and pauses when scrolled away to save battery.
+     - Visitors with reduced motion, Data Saver or 2G see the poster only.
      =================================================================== */
   (function initFeaturesMedia() {
-    var img = document.getElementById("featuresMedia");
-    if (!img || !("IntersectionObserver" in window)) return;
+    var video = document.getElementById("featuresMedia");
+    if (!video || !("IntersectionObserver" in window)) return;
 
-    var still = img.getAttribute("src");
-    var sources = [img.getAttribute("data-anim-webp"), img.getAttribute("data-anim-gif")].filter(Boolean);
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     var conn = navigator.connection || {};
     if (reduced.matches || conn.saveData || /(^|-)2g$/.test(conn.effectiveType || "")) return;
 
-    var readyUrl = null, loading = false, failed = false;
-    var inView = false, playing = false;
-
-    function preload(index) {
-      if (index >= sources.length) { failed = true; loading = false; return; }
-      var probe = new Image();
-      probe.onload = function () {
-        readyUrl = sources[index];
-        loading = false;
-        update();
-      };
-      probe.onerror = function () { preload(index + 1); };
-      probe.src = sources[index];
-    }
+    var loaded = false, inView = false;
 
     function load() {
-      if (readyUrl || loading || failed) return;
-      loading = true;
-      preload(0);
+      if (loaded) return;
+      loaded = true;
+      video.preload = "auto";
+      video.load();
     }
 
     function update() {
-      var shouldPlay = inView && !document.hidden && !reduced.matches && !!readyUrl;
-      if (shouldPlay && !playing) {
-        playing = true;
-        img.src = readyUrl;
-      } else if (!shouldPlay && playing) {
-        playing = false;
-        img.src = still;
+      if (inView && !document.hidden && !reduced.matches) {
+        var p = video.play();
+        if (p && p.catch) p.catch(function () {});
+      } else {
+        video.pause();
       }
     }
 
     new IntersectionObserver(function (entries) {
       if (entries[0].isIntersecting) load();
-    }, { rootMargin: "300px 0px" }).observe(img);
+    }, { rootMargin: "300px 0px" }).observe(video);
 
     new IntersectionObserver(function (entries) {
       inView = entries[0].isIntersecting;
-      if (inView) load();
       update();
-    }, { threshold: 0.35 }).observe(img);
+    }, { threshold: 0.35 }).observe(video);
 
     document.addEventListener("visibilitychange", update);
-    if (reduced.addEventListener) reduced.addEventListener("change", update);
+    if (reduced.addEventListener) reduced.addEventListener("change", function () {
+      if (reduced.matches) video.pause(); else update();
+    });
   })();
 
   /* 13. TIGER IMPACT Hover & Dumbbell Burst Interaction Engine */
