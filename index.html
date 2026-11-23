@@ -2361,7 +2361,7 @@ body.modal-open {
   --features-h: clamp(440px, 58vh, 538px);
   --features-media-ratio: 1 / 1;
   --features-media-w: clamp(220px, 72vw, 320px);
-  --features-media-fit: cover;
+  --features-media-fit: contain;
 }
 
 .features-section {
@@ -2430,8 +2430,6 @@ body.modal-open {
     max-height: 538px;
   }
 }
-
-
 
 /* 6. MEMBERSHIP PRICING SECTION (#050505 High Contrast SaaS Cards) ----- */
 /* 6. MEMBERSHIP PRICING SECTION (Pitch Black #000000 Background) ----- */
@@ -3297,8 +3295,6 @@ body.modal-open {
   }
 }
 
-
-
 /* 8. FAQ ACCORDION SECTION — "Common Questions" (Stationary Fixed Background Layer) ---- */
 #faq {
   position: relative;
@@ -4131,8 +4127,6 @@ html.js .reveal.is-visible {
    ===================================================================== */
 @media (max-width: 767px) {
 
-
-
   /* 3. FAQ SECTION (Solves Screenshot 3: Compact Buttons & 60FPS Lag-Free) */
   #faq {
     padding-block: clamp(2.5rem, 8vw, 3.5rem);
@@ -4203,6 +4197,31 @@ html.js .reveal.is-visible {
 .logo-tag { letter-spacing: .12em; }
 
 .footer-bg img.footer-bg-img { object-fit: cover; }
+.features-section { padding-bottom: calc(clamp(2.5rem, 5vw, 4rem) + 96px); }
+.concept-section {
+  background-color: #0A0B0C;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+.concept-figure {
+  max-width: min(520px, 100%);
+  margin: 0 auto;
+}
+.concept-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.concept-figure figcaption {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.55);
+}
 </style>
 </head>
 <body>
@@ -4296,7 +4315,6 @@ html.js .reveal.is-visible {
     </div>
   </div>
 </div>
-
 
 <!-- IMPLEMENTATION STATUS: Tiger Fitness business content adapted from public listings.
      Replace these images in assets/ with the owner's photos, keeping the same file names
@@ -4764,30 +4782,14 @@ html.js .reveal.is-visible {
     </div>
   </section>
 
-  <!-- ===================================================================
-       5. FEATURES MEDIA (logo reveal video)
-       Files: assets/tiger-features.webm (played by most browsers),
-       assets/tiger-features.mp4 (backup for older iPhones and Safari),
-       assets/tiger-features-poster-640.webp (still shown before playback
-       and for reduced motion / Data Saver). Loads and plays only near the
-       viewport (see "Features media loader" in the script).
-       Ratio/size: :root --features-media-* vars.
-       =================================================================== -->
-  <section class="features-section" id="features" aria-label="Tiger Fitness logo animation">
+  <!-- Concept artwork (AI-generated). Labelled on the page; replace with owner-approved photos under the same file name when available. -->
+  <section class="concept-section" aria-label="Concept artwork">
     <div class="wrap">
-      <figure class="features-media reveal" aria-label="Tiger Fitness logo animation">
-        <div class="features-media-frame">
-          <video id="featuresMedia"
-                 class="features-media-img"
-                 poster="assets/tiger-features-poster-640.webp"
-                 width="720" height="720"
-                 muted loop playsinline preload="none"
-                 aria-label="Tiger Fitness logo animation">
-            <source src="assets/tiger-features.webm" type="video/webm">
-            <source src="assets/tiger-features.mp4" type="video/mp4">
-            <img src="assets/tiger-features-poster-640.webp" alt="Tiger Fitness logo">
-          </video>
-        </div>
+      <figure class="concept-figure">
+        <img src="assets/tiger-programs-concept.webp"
+             alt="Concept artwork of an athlete training with a dumbbell in a dark gym"
+             width="800" height="800" loading="lazy" decoding="async">
+        <figcaption>Concept artwork. Not a photo of Tiger Fitness members or trainers.</figcaption>
       </figure>
     </div>
   </section>
@@ -5190,7 +5192,35 @@ html.js .reveal.is-visible {
 <!-- =====================================================================
      SITE FOOTER
      ===================================================================== -->
-<footer class="site-footer">
+  <!-- ===================================================================
+       5. FEATURES MEDIA (logo reveal video)
+       Files: assets/tiger-features.webm (played by most browsers),
+       assets/tiger-features.mp4 (backup for older iPhones and Safari),
+       assets/tiger-features-poster-640.webp (still shown before playback
+       and for reduced motion / Data Saver). Loads and plays only near the
+       viewport (see "Features media loader" in the script).
+       Ratio/size: :root --features-media-* vars.
+       =================================================================== -->
+  <section class="features-section" id="features" aria-label="Tiger Fitness logo animation">
+    <div class="wrap">
+      <figure class="features-media reveal" aria-label="Tiger Fitness logo animation">
+        <div class="features-media-frame">
+          <video id="featuresMedia"
+                 class="features-media-img"
+                 poster="assets/tiger-features-poster-640.webp"
+                 width="720" height="720"
+                 muted loop playsinline preload="none"
+                 aria-label="Tiger Fitness logo animation">
+            <source src="assets/tiger-features.webm" type="video/webm">
+            <source src="assets/tiger-features.mp4" type="video/mp4">
+            <img src="assets/tiger-features-poster-640.webp" alt="Tiger Fitness logo">
+          </video>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <footer class="site-footer">
   <div class="footer-bg" aria-hidden="true">
     <video class="footer-bg-video"
            loop
