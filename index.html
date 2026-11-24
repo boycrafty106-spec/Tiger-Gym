@@ -4137,6 +4137,16 @@ html.js .reveal.is-visible {
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
+.concept-figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #080808;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
 .concept-figure figcaption {
   margin-top: 0.75rem;
   text-align: center;
@@ -4708,9 +4718,16 @@ html.js .reveal.is-visible {
   <section class="concept-section" aria-label="Concept artwork">
     <div class="wrap">
       <figure class="concept-figure">
-        <img src="assets/tiger-programs-concept.webp"
-             alt="Concept artwork of an athlete training with a dumbbell in a dark gym"
-             width="800" height="800" loading="lazy" decoding="async">
+        <video id="featuresMedia"
+               poster="assets/tiger-features-poster-640.webp"
+               width="720" height="720"
+               muted loop playsinline preload="none"
+               disablepictureinpicture disableremoteplayback
+               aria-label="Tiger Fitness logo animation">
+          <source src="assets/tiger-features.webm" type="video/webm">
+          <source src="assets/tiger-features.mp4" type="video/mp4">
+          <img src="assets/tiger-features-poster-640.webp" alt="Tiger Fitness logo" width="720" height="720">
+        </video>
         <figcaption>Concept artwork. Not a photo of Tiger Fitness members or trainers.</figcaption>
       </figure>
     </div>
